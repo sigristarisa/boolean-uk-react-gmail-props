@@ -1,6 +1,7 @@
 import InboxItem from "./InboxItem";
 import StarredItem from "./StarredItem";
 import HideReadCheckBox from "./HideReadCheckbox";
+import "./NaviBar.css";
 
 const NaviBar = (props) => {
   const currentTab = props.currentTab;
