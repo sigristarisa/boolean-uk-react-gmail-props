@@ -7,7 +7,7 @@ const EmailItem = (props) => {
   return (
     <li
       className={`email ${email.read ? "read" : "unread"}`}
-      onClick={() => isOpen()}
+      onClick={() => isOpen(email)}
     >
       <div className="select">
         <input

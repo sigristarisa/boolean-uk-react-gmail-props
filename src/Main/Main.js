@@ -1,4 +1,5 @@
 import EmailList from "./EmailList";
+import Email from "../Email/Email";
 import "./Main.css";
 
 const Main = (props) => {
@@ -6,15 +7,13 @@ const Main = (props) => {
   const toggleRead = props.toggleRead;
   const toggleStar = props.toggleStar;
   const openEmail = props.openEmail;
+  const clickedEmail = props.clickedEmail;
   const isOpen = props.isOpen;
 
   return (
     <main className="emails">
       {openEmail ? (
-        <div>
-          <p>just Kidding!</p>
-          <button onClick={() => isOpen()}>Back</button>
-        </div>
+        <Email clickedEmail={clickedEmail} isOpen={isOpen} />
       ) : (
         <EmailList
           filteredEmails={filteredEmails}
