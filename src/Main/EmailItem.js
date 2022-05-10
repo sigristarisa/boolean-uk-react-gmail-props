@@ -2,9 +2,13 @@ const EmailItem = (props) => {
   const toggleRead = props.toggleRead;
   const toggleStar = props.toggleStar;
   const email = props.email;
+  const isOpen = props.isOpen;
 
   return (
-    <li className={`email ${email.read ? "read" : "unread"}`}>
+    <li
+      className={`email ${email.read ? "read" : "unread"}`}
+      onClick={() => isOpen()}
+    >
       <div className="select">
         <input
           className="select-checkbox"

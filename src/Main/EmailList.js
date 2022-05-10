@@ -4,6 +4,7 @@ const EmailList = (props) => {
   const filteredEmails = props.filteredEmails;
   const toggleRead = props.toggleRead;
   const toggleStar = props.toggleStar;
+  const isOpen = props.isOpen;
 
   return (
     <ul>
@@ -13,6 +14,7 @@ const EmailList = (props) => {
           toggleRead={toggleRead}
           toggleStar={toggleStar}
           email={email}
+          isOpen={isOpen}
         />
       ))}
     </ul>

@@ -11,11 +11,13 @@ const App = () => {
   const [emails, setEmails] = useState(initialEmails);
   const [hideRead, setHideRead] = useState(false);
   const [currentTab, setCurrentTab] = useState("inbox");
+  const [openEmail, setOpenEmail] = useState(false);
 
   const unreadEmails = emails.filter((email) => !email.read);
   const starredEmails = emails.filter((email) => email.starred);
   const getReadEmails = (emails) => emails.filter((email) => !email.read);
   const getStarredEmails = (emails) => emails.filter((email) => email.starred);
+  const isOpen = () => setOpenEmail(!openEmail);
 
   const toggleStar = (targetEmail) => {
     const updatedEmails = (emails) =>
@@ -55,6 +57,8 @@ const App = () => {
         filteredEmails={filteredEmails}
         toggleRead={toggleRead}
         toggleStar={toggleStar}
+        openEmail={openEmail}
+        isOpen={isOpen}
       />
     </div>
   );
