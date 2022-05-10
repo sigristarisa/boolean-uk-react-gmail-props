@@ -1,16 +1,11 @@
 import { useState } from "react";
 
 import initialEmails from "./data/emails";
-
 import Header from "./Header/Header";
 import NaviBar from "./NaviBar/NaviBar";
 import Main from "./Main/Main";
 
 import "./styles/app.css";
-
-const getReadEmails = (emails) => emails.filter((email) => !email.read);
-
-const getStarredEmails = (emails) => emails.filter((email) => email.starred);
 
 const App = () => {
   const [emails, setEmails] = useState(initialEmails);
@@ -19,6 +14,8 @@ const App = () => {
 
   const unreadEmails = emails.filter((email) => !email.read);
   const starredEmails = emails.filter((email) => email.starred);
+  const getReadEmails = (emails) => emails.filter((email) => !email.read);
+  const getStarredEmails = (emails) => emails.filter((email) => email.starred);
 
   const toggleStar = (targetEmail) => {
     const updatedEmails = (emails) =>
@@ -39,9 +36,7 @@ const App = () => {
   };
 
   let filteredEmails = emails;
-
   if (hideRead) filteredEmails = getReadEmails(filteredEmails);
-
   if (currentTab === "starred")
     filteredEmails = getStarredEmails(filteredEmails);
 

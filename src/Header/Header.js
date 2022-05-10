@@ -1,5 +1,6 @@
 import HeaderLeftMenu from "./HeaderLeftMenu";
 import HeaderSearchBar from "./HeaderSearchBar";
+import "./Header.css";
 
 const Header = () => {
   return (
