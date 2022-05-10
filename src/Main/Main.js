@@ -1,4 +1,5 @@
 import EmailList from "./EmailList";
+import "./Main.css";
 
 const Main = (props) => {
   const filteredEmails = props.filteredEmails;
