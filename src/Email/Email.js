@@ -4,6 +4,7 @@ const Email = (props) => {
   return (
     <div>
       <h2>{clickedEmail.title}</h2>
+      <p>{clickedEmail.sender}</p>
       <button onClick={() => isOpen("")}>Back</button>
     </div>
   );

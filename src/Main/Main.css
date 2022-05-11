@@ -10,7 +10,7 @@
 
 .email {
   display: grid;
-  grid-template-columns: 30px 30px 150px 1fr;
+  grid-template-columns: 30px 30px 1fr;
   padding: 10px;
   background-color: white;
   font-size: 0.9rem;
@@ -33,6 +33,11 @@
 
 .email.unread {
   font-weight: 600;
+}
+
+.sender-title-wrapper {
+  display: grid;
+  grid-template-columns: 150px 1fr;
 }
 
 .email .title {

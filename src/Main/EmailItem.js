@@ -5,10 +5,7 @@ const EmailItem = (props) => {
   const isOpen = props.isOpen;
 
   return (
-    <li
-      className={`email ${email.read ? "read" : "unread"}`}
-      onClick={() => isOpen(email)}
-    >
+    <li className={`email ${email.read ? "read" : "unread"}`}>
       <div className="select">
         <input
           className="select-checkbox"
@@ -25,8 +22,10 @@ const EmailItem = (props) => {
           onChange={() => toggleStar(email)}
         />
       </div>
-      <div className="sender">{email.sender}</div>
-      <div className="title">{email.title}</div>
+      <div className="sender-title-wrapper" onClick={() => isOpen(email)}>
+        <div className="sender">{email.sender}</div>
+        <div className="title">{email.title}</div>
+      </div>
     </li>
   );
 };
