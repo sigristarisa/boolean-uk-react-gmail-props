@@ -38,6 +38,7 @@
 .sender-title-wrapper {
   display: grid;
   grid-template-columns: 150px 1fr;
+  cursor: pointer;
 }
 
 .email .title {
@@ -46,11 +47,16 @@
   text-overflow: ellipsis;
 }
 
+.email .select-checkbox {
+  cursor: pointer;
+}
+
 .email .star-checkbox {
   appearance: none;
   position: relative;
   display: grid;
   align-content: center;
+  cursor: pointer;
 }
 
 .email .star-checkbox:focus {
